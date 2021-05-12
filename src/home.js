@@ -25,9 +25,12 @@ function renderHome() {
   row.classList.add("row");
   col1.classList.add("col-md-12");
   full.classList.add("full");
-  carousel1.classList.add("carousel", "vert slide");
-  carousel2.classList.add("carousel-inner", "active")
-  carousel3.classList.add("carousel-item");
+  carousel1.classList.add("carousel");
+  carousel1.classList.add("vert");
+  carousel1.classList.add("slide");
+  carousel2.classList.add("carousel-inner");
+  carousel2.classList.add("active");
+  // carousel3.classList.add("carousel-item");
   row2.classList.add("row");
   col2.classList.add("col-md-5");
   sliderC.classList.add("slider_cont");
@@ -35,6 +38,7 @@ function renderHome() {
   col3.classList.add("col-md-7");
   sliderI.classList.add("slider_image", "full", "text_align_center")
   image.setAttribute('src', 'b5786459156f31ec740d.png');
+  
   sliderCA.setAttribute('href', '#')
   sliderCA.textContent = "Menu";
   sh31.textContent = "Burgers";
@@ -42,17 +46,20 @@ function renderHome() {
   
   // format
 
+ 
+
+  
+
+  sliderC.appendChild(sh31)
+  sliderC.appendChild(sh32)
+  sliderC.appendChild(sp)
+  sliderC.appendChild(sliderCA);
+  col2.appendChild(sliderC);
+  row2.appendChild(col2);
+
   sliderI.appendChild(image);
   col3.appendChild(sliderI);
   row2.appendChild(col3)
-
-  sliderC.appendChild(sliderCA);
-  // sliderC.appendChild(sp)
-  // sliderC.appendChild(sh32)
-  // sliderC.appendChild(sbr)
-  // sliderC.appendChild(sh31)
-  col2.appendChild(sliderC);
-  row2.appendChild(col2);
 
   carousel3.appendChild(row2);
   carousel2.appendChild(carousel3);

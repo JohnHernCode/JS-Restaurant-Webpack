@@ -6,10 +6,18 @@ import './responsive.css';
 // import pages
 import {
   renderNav
-} from './navbar'
+} from './navbar';
 import {
   renderHome
-} from './home'
+} from './home';
+
+import {
+  renderMenu
+} from './menu';
+
+import {
+  renderContact
+} from './contact';
 
 // import images
 import Logo from './logo.png';
@@ -37,10 +45,28 @@ function home() {
   renderNav();
   renderHome();
 }
+function menu() {
+  content.innerHTML = "";
+  renderNav();
+  renderMenu();
+}
+function contact() {
+  content.innerHTML = "";
+  renderNav();
+  renderContact();
+}
 
 home();
+
+document.addEventListener("click", (e) => {
+  const target = e.target.innerText;
+
+  if (target === "Home") home();
+  if (target === "Menu") menu();
+  if (target === "Contact") contact();
+});
 
 export {
   content,
   createHtmlElement
-}
+} 

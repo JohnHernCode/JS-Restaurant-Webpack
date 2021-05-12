@@ -77,9 +77,9 @@
      /* .dinone {
         display: none !important;
     } */
-     .slider_cont {
+     /* .slider_cont {
         display: none;
-    }
+    } */
      .slider_section {
         min-height: auto;
     }
@@ -136,9 +136,9 @@
      /* .dinone {
         display: none !important;
     } */
-     .slider_cont {
+     /* .slider_cont {
         display: none;
-    }
+    } */
      .slider_section {
         min-height: auto;
     }
@@ -223,9 +223,9 @@
      /* .dinone {
         display: none !important;
     } */
-     .slider_cont {
+     /* .slider_cont {
         display: none;
-    }
+    } */
      #main_slider a.carousel-control-prev {
         top: 40%;
          left: 0px;
