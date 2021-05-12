@@ -1,7 +1,7 @@
 import { content, createHtmlElement } from "./index";
 
 function renderNav() {
-  const navItems = ["Home", "Menu", "About"];
+  const navItems = ["Home", "Menu", "Contact"];
   const header = document.createElement("header");
   const container = document.createElement("div");
   const row = document.createElement("div");
@@ -23,18 +23,29 @@ function renderNav() {
   itemsDiv.classList.add("right_header_info")
   image.setAttribute('src', 'a794730fa04f411a44a6.png');
 
-  navItems.forEach((item) =>
-    uList.appendChild(createHtmlElement("li", null, null, item))
-  );
+  navItems.forEach((item) => {
+    // uList.appendChild(createHtmlElement("li", null, null, item));
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    const h3 = document.createElement('h3');
+    a.setAttribute('href', '#');
+    h3.textContent = `${item}`;
+    a.appendChild(h3);
+    li.appendChild(a);
+    uList.appendChild(li);
+  });
+
+
+  logoLink.setAttribute('href', '#')
 
 
   logoLink.appendChild(image);
   logoDiv.appendChild(logoLink);
   logoWrap.appendChild(logoDiv);
   row.appendChild(logoWrap);
-  uList.appendChild(itemsDiv);
-  itemsDiv.appendChild(itemsFull);
-  itemsFull.appendChild(itemsWrap);
+  itemsDiv.appendChild(uList);
+  itemsFull.appendChild(itemsDiv)
+  itemsWrap.appendChild(itemsFull)
   row.appendChild(itemsWrap);
   container.appendChild(row);
   header.appendChild(container);

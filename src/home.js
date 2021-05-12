@@ -1,44 +1,68 @@
-import { content, createHtmlElement } from "./index";
+import { content } from "./index";
 
-function renderNav() {
-  const navItems = ["Home", "Menu", "About"];
-  const header = document.createElement("header");
+function renderHome() {
+  const section = document.createElement("div");
   const container = document.createElement("div");
   const row = document.createElement("div");
-  const logoWrap = document.createElement("div");
-  const logoDiv = document.createElement("div");
-  const logoLink = document.createElement("a");
+  const col1 = document.createElement("div");
+  const full = document.createElement("div");
+  const carousel1 = document.createElement("div");
+  const carousel2 = document.createElement("div");
+  const carousel3 = document.createElement("div");
+  const row2 = document.createElement("div");
+  const col2 = document.createElement("div");
+  const sliderC = document.createElement("div");
+  const sliderCA = document.createElement("a");
+  const col3 = document.createElement("div");
+  const sliderI = document.createElement("div");
   const image = document.createElement("img");
-  const itemsWrap = document.createElement("div");
-  const itemsFull = document.createElement("div");
-  const itemsDiv = document.createElement("div");
-  const uList = document.createElement("ul");
-  container.classList.add("container-fluid");
+  const sh31 = document.createElement("h3");
+  const sh32 = document.createElement("h3");
+  const sp = document.createElement("p");
+  const sbr = document.createElement("br");
+  section.classList.add("slider_section")
+  container.classList.add("container");
   row.classList.add("row");
-  logoWrap.classList.add("col-md-3");
-  logoDiv.classList.add("full");
-  logoLink.classList.add("logo");
-  itemsWrap.classList.add("col-md-4", "align-items-center")
-  itemsFull.classList.add("full");
-  itemsDiv.classList.add("right_header_info")
-  image.setAttribute('src', 'a794730fa04f411a44a6.png');
+  col1.classList.add("col-md-12");
+  full.classList.add("full");
+  carousel1.classList.add("carousel", "vert slide");
+  carousel2.classList.add("carousel-inner", "active")
+  carousel3.classList.add("carousel-item");
+  row2.classList.add("row");
+  col2.classList.add("col-md-5");
+  sliderC.classList.add("slider_cont");
+  sliderCA.classList.add("main_bt_border");
+  col3.classList.add("col-md-7");
+  sliderI.classList.add("slider_image", "full", "text_align_center")
+  image.setAttribute('src', 'b5786459156f31ec740d.png');
+  sliderCA.setAttribute('href', '#')
+  sliderCA.textContent = "Menu";
+  sh31.textContent = "Burgers";
+  sh32.textContent = "That Delight!";
+  
+  // format
 
-  navItems.forEach((item) =>
-    uList.appendChild(createHtmlElement("li", null, null, item))
-  );
+  sliderI.appendChild(image);
+  col3.appendChild(sliderI);
+  row2.appendChild(col3)
 
+  sliderC.appendChild(sliderCA);
+  // sliderC.appendChild(sp)
+  // sliderC.appendChild(sh32)
+  // sliderC.appendChild(sbr)
+  // sliderC.appendChild(sh31)
+  col2.appendChild(sliderC);
+  row2.appendChild(col2);
 
-  logoLink.appendChild(image);
-  logoDiv.appendChild(logoLink);
-  logoWrap.appendChild(logoDiv);
-  row.appendChild(logoWrap);
-  uList.appendChild(itemsDiv);
-  itemsDiv.appendChild(itemsFull);
-  itemsFull.appendChild(itemsWrap);
-  row.appendChild(itemsWrap);
+  carousel3.appendChild(row2);
+  carousel2.appendChild(carousel3);
+  carousel1.appendChild(carousel2);
+  full.appendChild(carousel1);
+  col1.appendChild(full);
+  row.appendChild(col1);
   container.appendChild(row);
-  header.appendChild(container);
-  content.appendChild(header);  
+  section.appendChild(container);
+  content.appendChild(section);  
 }
 
-export { renderNav }
+export { renderHome }
