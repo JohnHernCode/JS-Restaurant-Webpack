@@ -4,37 +4,27 @@ import './bootstrap.min.css';
 import './responsive.css';
 
 // import pages
-import {
-  renderNav,
-} from './navbar';
-import {
-  renderHome,
-} from './home';
-
-import {
-  renderMenu,
-} from './menu';
-
-import {
-  renderContact,
-} from './contact';
+import renderNav from './navbar';
+import renderHome from './home';
+import renderMenu from './menu';
+import renderContact from './contact';
 
 const content = document.querySelector('#content');
 
 function home() {
   content.innerHTML = '';
-  renderNav();
-  renderHome();
+  renderNav(content);
+  renderHome(content);
 }
 function menu() {
   content.innerHTML = '';
-  renderNav();
-  renderMenu();
+  renderNav(content);
+  renderMenu(content);
 }
 function contact() {
   content.innerHTML = '';
-  renderNav();
-  renderContact();
+  renderNav(content);
+  renderContact(content);
 }
 
 home();
@@ -46,7 +36,3 @@ document.addEventListener('click', (e) => {
   if (target === 'Menu') menu();
   if (target === 'Contact') contact();
 });
-
-export {
-  content,
-};

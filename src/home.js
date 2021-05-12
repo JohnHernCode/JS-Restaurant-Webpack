@@ -1,6 +1,4 @@
-import { content } from './index';
-
-function renderHome() {
+export default function renderHome(content) {
   const section = document.createElement('div');
   const container = document.createElement('div');
   const row = document.createElement('div');
@@ -29,7 +27,6 @@ function renderHome() {
   carousel1.classList.add('slide');
   carousel2.classList.add('carousel-inner');
   carousel2.classList.add('active');
-  // carousel3.classList.add("carousel-item");
   row2.classList.add('row');
   col2.classList.add('col-md-5');
   sliderC.classList.add('slider_cont');
@@ -66,5 +63,3 @@ function renderHome() {
   section.appendChild(container);
   content.appendChild(section);
 }
-
-export { renderHome };

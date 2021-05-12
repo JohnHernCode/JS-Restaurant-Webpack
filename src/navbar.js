@@ -1,6 +1,4 @@
-import { content } from './index';
-
-function renderNav() {
+export default function renderNav(content) {
   const navItems = ['Home', 'Menu', 'Contact'];
   const header = document.createElement('header');
   const container = document.createElement('div');
@@ -48,5 +46,3 @@ function renderNav() {
   header.appendChild(container);
   content.appendChild(header);
 }
-
-export { renderNav };

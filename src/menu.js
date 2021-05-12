@@ -1,6 +1,4 @@
-import { content } from './index';
-
-function renderMenu() {
+export default function renderMenu(content) {
   const section = document.createElement('div');
   const container = document.createElement('div');
   const row = document.createElement('div');
@@ -97,5 +95,3 @@ function renderMenu() {
   section.appendChild(container);
   content.appendChild(section);
 }
-
-export { renderMenu };
