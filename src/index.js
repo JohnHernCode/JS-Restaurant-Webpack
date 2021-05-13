@@ -11,21 +11,21 @@ import renderContact from './contact';
 
 const content = document.querySelector('#content');
 
-function home() {
+const home = () => {
   content.innerHTML = '';
   renderNav(content);
   renderHome(content);
-}
-function menu() {
+};
+const menu = () => {
   content.innerHTML = '';
   renderNav(content);
   renderMenu(content);
-}
-function contact() {
+};
+const contact = () => {
   content.innerHTML = '';
   renderNav(content);
   renderContact(content);
-}
+};
 
 home();
 

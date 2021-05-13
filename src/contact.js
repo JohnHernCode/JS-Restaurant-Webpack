@@ -1,4 +1,4 @@
-export default function renderContact(content) {
+const renderContact = (content) => {
   const section = document.createElement('div');
   const container = document.createElement('div');
   const row = document.createElement('div');
@@ -71,4 +71,6 @@ export default function renderContact(content) {
   container.appendChild(row);
   section.appendChild(container);
   content.appendChild(section);
-}
+};
+
+export default renderContact;

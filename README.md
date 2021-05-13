@@ -15,7 +15,7 @@
 
 This is the Microverse Restaurant Project in Javascript.
 It is an HTML/CSS/JS page where users can view the home, menu, and contact pages.
-All pages are built from Javascript.
+All pages are built from Javascript. They are pushed into the HTML via the content div.
 
 ## Screen Shot
 

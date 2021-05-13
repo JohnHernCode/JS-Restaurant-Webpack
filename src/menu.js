@@ -1,4 +1,4 @@
-export default function renderMenu(content) {
+const renderMenu = (content) => {
   const section = document.createElement('div');
   const container = document.createElement('div');
   const row = document.createElement('div');
@@ -94,4 +94,6 @@ export default function renderMenu(content) {
   container.appendChild(row);
   section.appendChild(container);
   content.appendChild(section);
-}
+};
+
+export default renderMenu;
