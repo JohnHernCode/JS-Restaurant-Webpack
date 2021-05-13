@@ -1,4 +1,4 @@
-export default function renderHome(content) {
+const renderHome = (content) => {
   const section = document.createElement('div');
   const container = document.createElement('div');
   const row = document.createElement('div');
@@ -63,3 +63,5 @@ export default function renderHome(content) {
   section.appendChild(container);
   content.appendChild(section);
 }
+
+export default renderHome;

@@ -1,4 +1,4 @@
-export default function renderNav(content) {
+const renderNav = (content) => {
   const navItems = ['Home', 'Menu', 'Contact'];
   const header = document.createElement('header');
   const container = document.createElement('div');
@@ -46,3 +46,5 @@ export default function renderNav(content) {
   header.appendChild(container);
   content.appendChild(header);
 }
+
+export default renderNav;
