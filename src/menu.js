@@ -94,6 +94,6 @@ const renderMenu = (content) => {
   container.appendChild(row);
   section.appendChild(container);
   content.appendChild(section);
-}
+};
 
 export default renderMenu;

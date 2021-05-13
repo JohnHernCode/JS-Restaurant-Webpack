@@ -62,6 +62,6 @@ const renderHome = (content) => {
   container.appendChild(row);
   section.appendChild(container);
   content.appendChild(section);
-}
+};
 
 export default renderHome;

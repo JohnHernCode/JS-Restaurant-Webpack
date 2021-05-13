@@ -45,6 +45,6 @@ const renderNav = (content) => {
   container.appendChild(row);
   header.appendChild(container);
   content.appendChild(header);
-}
+};
 
 export default renderNav;
