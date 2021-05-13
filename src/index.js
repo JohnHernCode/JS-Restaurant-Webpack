@@ -15,17 +15,17 @@ const home = () => {
   content.innerHTML = '';
   renderNav(content);
   renderHome(content);
-}
+};
 const menu = () => {
   content.innerHTML = '';
   renderNav(content);
   renderMenu(content);
-}
+};
 const contact = () => {
   content.innerHTML = '';
   renderNav(content);
   renderContact(content);
-}
+};
 
 home();
 
